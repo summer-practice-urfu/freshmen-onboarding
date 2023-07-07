@@ -13,22 +13,22 @@ interface ILink {
 const linkList: ILink[] = [
     {
         text: 'Онбординг',
-        href: '#'
+        href: '/'
     },
     {
         text: 'Блог',
-        href: '#'
+        href: '/blog'
     },
     {
         text: 'Полезные ссылки',
-        href: '#'
+        href: '/useful-links'
     },
     {
         text: 'Q&A',
-        href: '#'
+        href: '/Q&A'
     }
 ]
-
+// TODO поправить роутинг, header не должен ререндериться при переходе
 const Header: React.FC<HeaderProps> = () => {
     return (
         <AppBar sx={{height: '73px', padding: '0 120px', display: 'flex', flexDirection: 'row', justifyContent:'space-between', alignItems: 'center', background: 'rgba(73, 105, 181, 1)'}}>

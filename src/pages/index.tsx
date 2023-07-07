@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
     return {
         props: {
             meta: {
-                title: 'Title',
+                title: 'Onboarding',
                 description: 'description',
                 keywords: 'keywords'
             },
