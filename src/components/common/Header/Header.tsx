@@ -1,15 +1,51 @@
 import React from 'react';
-import { Container } from './Header.styled';
+import {AppBar, Avatar, Box, Link, Typography} from "@mui/material";
 
 export interface HeaderProps {
     /* Component props */
 }
 
+interface ILink {
+    text: string,
+    href: string,
+}
+
+const linkList: ILink[] = [
+    {
+        text: 'Онбординг',
+        href: '#'
+    },
+    {
+        text: 'Блог',
+        href: '#'
+    },
+    {
+        text: 'Полезные ссылки',
+        href: '#'
+    },
+    {
+        text: 'Q&A',
+        href: '#'
+    }
+]
+
 const Header: React.FC<HeaderProps> = () => {
     return (
-        <Container>
-            {/* Component body */}
-        </Container>
+        <AppBar sx={{height: '73px', padding: '0 120px', display: 'flex', flexDirection: 'row', justifyContent:'space-between', alignItems: 'center', background: 'rgba(73, 105, 181, 1)'}}>
+            <Box sx={{display: 'flex', gap: '45px'}}>
+                {linkList.map((link) => {
+                    return (
+                        <Link key={link.text} underline='hover' href={link.href}>
+                            <Typography variant='h6' sx={{color: '#fff'}}>{link.text}</Typography>
+                        </Link>
+                    )
+                })}
+            </Box>
+            <Box sx={{display: 'flex', alignItems: 'center', gap:'10px'}}>
+                <Typography variant='body1' >Фамилия Имя</Typography>
+                <Avatar src='https://sun9-28.userapi.com/impg/bnvB7ypixlyiFYL4DDlbLuG_joNwymTW_q1XJQ/NAABcabJw74.jpg?size=1620x2160&quality=95&sign=0895bd96c6ff0c918b31cf0f00f9fb08&type=album' />
+            </Box>
+        </AppBar>
     )
 }
 
