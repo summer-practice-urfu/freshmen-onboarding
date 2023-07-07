@@ -4,6 +4,8 @@ import Header from '../Header/Header';
 import { BasePageProps } from '@/interfaces';
 import Sandwich from '@/components/common/Sandwich/Sandwich';
 import {Container} from "@/components/common/Layout/Layout.styled";
+import {ThemeProvider} from "@mui/material";
+import {theme} from "@/style/theme";
 
 
 interface LayoutProps extends BasePageProps {
@@ -23,13 +25,16 @@ const Layout: React.FC<LayoutProps> = ({ children, meta, header, sandwich }) => 
                 <meta name="og:description" content={meta.description} />
             </Head>
 
-            <Header {...header} />
+            <ThemeProvider theme={theme}>
+                <Header {...header} />
 
-            <Sandwich {...sandwich} />
+                <Sandwich {...sandwich} />
 
-            <Container>
-                {children}
-            </Container>
+                <Container>
+                    {children}
+                </Container>
+            </ThemeProvider>
+
         </>
     );
 };

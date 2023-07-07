@@ -1,6 +1,8 @@
 import { createTheme } from '@mui/material';
 
-export const theme = createTheme();
+export const theme = createTheme({typography: {
+        fontFamily: 'Rubik, sans-serif',
+    }});
 
 theme.typography.h1 = {
     fontSize: '6rem',

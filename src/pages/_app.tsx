@@ -1,8 +1,7 @@
 import { AppProps } from 'next/app';
 import GlobalStyle from '@/style/globalStyles';
-import '@/style/fonts.css';
+import '@/style/fonts.css'
 import ScrollBarProvider from '@/context/ScrollBarContext';
-import 'swiper/css';
 import { SWRConfig } from 'swr';
 import fetcher from '@/lib/fetcher';
 

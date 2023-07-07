@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import variables from './variables';
 import { color } from './mixins';
 
 const GlobalStyle = createGlobalStyle`
@@ -13,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     html {
-        font-family: ${variables.fonts.default};
+      font-family: ${'Rubik, sans-serif'};
         scrollbar-gutter: stable;
         color: ${color('black')};
     }
@@ -41,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     button {
-        font-family: ${variables.fonts.default};
+      font-family: ${'Rubik'};
         
         &, &:active,
         &:focus {
