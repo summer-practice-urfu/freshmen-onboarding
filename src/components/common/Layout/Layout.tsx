@@ -3,8 +3,7 @@ import Head from 'next/head';
 import Header from '../Header/Header';
 import { BasePageProps } from '@/interfaces';
 import Sandwich from '@/components/common/Sandwich/Sandwich';
-import {Container} from "@/components/common/Layout/Layout.styled";
-import {ThemeProvider} from "@mui/material";
+import {Box, ThemeProvider} from "@mui/material";
 import {theme} from "@/style/theme";
 
 
@@ -30,9 +29,9 @@ const Layout: React.FC<LayoutProps> = ({ children, meta, header, sandwich }) => 
 
                 <Sandwich {...sandwich} />
 
-                <Container>
+                <Box sx={{margin: '70px 120px 0 120px'}}>
                     {children}
-                </Container>
+                </Box>
             </ThemeProvider>
 
         </>

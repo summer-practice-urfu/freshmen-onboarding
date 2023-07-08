@@ -31,7 +31,7 @@ const linkList: ILink[] = [
 // TODO поправить роутинг, header не должен ререндериться при переходе
 const Header: React.FC<HeaderProps> = () => {
     return (
-        <AppBar sx={{height: '73px', padding: '0 120px', display: 'flex', flexDirection: 'row', justifyContent:'space-between', alignItems: 'center', background: 'rgba(73, 105, 181, 1)'}}>
+        <AppBar sx={{height: '70px', padding: '0 120px', display: 'flex', flexDirection: 'row', justifyContent:'space-between', alignItems: 'center', background: 'rgba(73, 105, 181, 1)'}}>
             <Box sx={{display: 'flex', gap: '45px'}}>
                 {linkList.map((link) => {
                     return (
