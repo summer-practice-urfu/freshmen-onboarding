@@ -23,9 +23,9 @@ const Index: FC<IndexProps> = (props) => {
                     gridColumnGap: '30px',
                     gridRowGap: '40px'
                 }}>
-                    <BlogCard/>
-                    <BlogCard/>
-                    <BlogCard/>
+                    <BlogCard rating={5}/>
+                    <BlogCard rating={20}/>
+                    <BlogCard rating={-2}/>
                 </Box>
             </Box>
 
